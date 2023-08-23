@@ -1,13 +1,36 @@
 <script setup lang="ts">
-//
+import CustomNavbar from './components/CustomNavbar.vue'
+import { getHomeBannerAPI, getHomeCategoryAPI } from '@/services/home'
+import { onLoad } from '@dcloudio/uni-app'
+import { ref } from 'vue'
+import CategoryPanel from './components/CategoryPanel.vue'
+import type { BannerItem, CategoryItem } from '../../types/home'
+
+const bannerList = ref<BannerItem[]>([])
+const pannelList = ref<CategoryItem[]>([])
+
+const getBannerList = async () => {
+  const res = await getHomeBannerAPI()
+  bannerList.value = res.result
+}
+
+const getPannelList = async () => {
+  const res = await getHomeCategoryAPI()
+  pannelList.value = res.result
+}
+
+onLoad(async (option) => {
+  getBannerList()
+  getPannelList()
+})
 </script>
 
 <template>
-  <view class="index">index</view>
-
-  <uni-card title="基础卡片11" :isFull="true" sub-title="副标题" extra="额外信息">
-    <text>这是一个通栏卡片 ，通栏没有外边距，左右会贴合父元素。</text>
-  </uni-card>
+  <view class="index">
+    <CustomNavbar />
+    <XtxSwiper :list="bannerList" />
+    <CategoryPanel :list="pannelList" />
+  </view>
 </template>
 
 <style lang="scss">
