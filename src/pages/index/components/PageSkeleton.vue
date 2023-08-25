@@ -31,61 +31,61 @@
           <view class="category CategoryPanel--category">
             <navigator class="category-item CategoryPanel--category-item" hover-class="none">
               <image class="icon CategoryPanel--icon sk-image"></image>
-              <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-980 sk-text"
+              <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-66 sk-text"
                 >居家</text
               >
             </navigator>
             <navigator class="category-item CategoryPanel--category-item" hover-class="none">
               <image class="icon CategoryPanel--icon sk-image"></image>
-              <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-4 sk-text"
+              <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-177 sk-text"
                 >锦鲤</text
               >
             </navigator>
             <navigator class="category-item CategoryPanel--category-item" hover-class="none">
               <image class="icon CategoryPanel--icon sk-image"></image>
-              <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-38 sk-text"
+              <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-142 sk-text"
                 >服饰</text
               >
             </navigator>
             <navigator class="category-item CategoryPanel--category-item" hover-class="none">
               <image class="icon CategoryPanel--icon sk-image"></image>
-              <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-916 sk-text"
+              <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-677 sk-text"
                 >母婴</text
               >
             </navigator>
             <navigator class="category-item CategoryPanel--category-item" hover-class="none">
               <image class="icon CategoryPanel--icon sk-image"></image>
-              <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-330 sk-text"
+              <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-635 sk-text"
                 >个护</text
               >
             </navigator>
             <navigator class="category-item CategoryPanel--category-item" hover-class="none">
               <image class="icon CategoryPanel--icon sk-image"></image>
-              <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-483 sk-text"
+              <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-185 sk-text"
                 >严选</text
               >
             </navigator>
             <navigator class="category-item CategoryPanel--category-item" hover-class="none">
               <image class="icon CategoryPanel--icon sk-image"></image>
-              <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-10 sk-text"
+              <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-221 sk-text"
                 >数码</text
               >
             </navigator>
             <navigator class="category-item CategoryPanel--category-item" hover-class="none">
               <image class="icon CategoryPanel--icon sk-image"></image>
-              <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-137 sk-text"
+              <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-40 sk-text"
                 >运动</text
               >
             </navigator>
             <navigator class="category-item CategoryPanel--category-item" hover-class="none">
               <image class="icon CategoryPanel--icon sk-image"></image>
-              <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-737 sk-text"
+              <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-29 sk-text"
                 >杂项</text
               >
             </navigator>
             <navigator class="category-item CategoryPanel--category-item" hover-class="none">
               <image class="icon CategoryPanel--icon sk-image"></image>
-              <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-15 sk-text"
+              <text class="text CategoryPanel--text sk-transparent sk-text-14-2857-18 sk-text"
                 >品牌</text
               >
             </navigator>
@@ -96,11 +96,11 @@
             <view class="item HotPanel--item">
               <view class="title HotPanel--title">
                 <text
-                  class="title-text HotPanel--title-text sk-transparent sk-text-14-2857-242 sk-text"
+                  class="title-text HotPanel--title-text sk-transparent sk-text-14-2857-402 sk-text"
                   >特惠推荐</text
                 >
                 <text
-                  class="title-desc HotPanel--title-desc sk-transparent sk-text-14-2857-803 sk-text"
+                  class="title-desc HotPanel--title-desc sk-transparent sk-text-14-2857-376 sk-text"
                   >精选全攻略</text
                 >
               </view>
@@ -112,11 +112,11 @@
             <view class="item HotPanel--item">
               <view class="title HotPanel--title">
                 <text
-                  class="title-text HotPanel--title-text sk-transparent sk-text-14-2857-305 sk-text"
+                  class="title-text HotPanel--title-text sk-transparent sk-text-14-2857-97 sk-text"
                   >爆款推荐</text
                 >
                 <text
-                  class="title-desc HotPanel--title-desc sk-transparent sk-text-14-2857-915 sk-text"
+                  class="title-desc HotPanel--title-desc sk-transparent sk-text-14-2857-511 sk-text"
                   >最受欢迎</text
                 >
               </view>
@@ -128,11 +128,11 @@
             <view class="item HotPanel--item">
               <view class="title HotPanel--title">
                 <text
-                  class="title-text HotPanel--title-text sk-transparent sk-text-14-2857-592 sk-text"
+                  class="title-text HotPanel--title-text sk-transparent sk-text-14-2857-88 sk-text"
                   >一站买全</text
                 >
                 <text
-                  class="title-desc HotPanel--title-desc sk-transparent sk-text-14-2857-68 sk-text"
+                  class="title-desc HotPanel--title-desc sk-transparent sk-text-14-2857-881 sk-text"
                   >精心优选</text
                 >
               </view>
@@ -144,11 +144,11 @@
             <view class="item HotPanel--item">
               <view class="title HotPanel--title">
                 <text
-                  class="title-text HotPanel--title-text sk-transparent sk-text-14-2857-677 sk-text"
+                  class="title-text HotPanel--title-text sk-transparent sk-text-14-2857-889 sk-text"
                   >新鲜好物</text
                 >
                 <text
-                  class="title-desc HotPanel--title-desc sk-transparent sk-text-14-2857-570 sk-text"
+                  class="title-desc HotPanel--title-desc sk-transparent sk-text-14-2857-306 sk-text"
                   >生活加分项</text
                 >
               </view>
@@ -159,22 +159,31 @@
             </view>
           </view>
         </view>
+        <view is="components/XtxGuess" class="r data-v-83a5a03c">
+          <view class="caption XtxGuess--caption">
+            <text
+              class="text XtxGuess--text sk-transparent sk-text-0-0000-883 sk-text sk-pseudo sk-pseudo-circle"
+              >猜你喜欢</text
+            >
+          </view>
+        </view>
       </scroll-view>
     </view>
   </view>
 </template>
+
 <style>
 .sk-transparent {
   color: transparent !important;
 }
-.sk-text-3-5714-468 {
+.sk-text-6-2500-762 {
   background-image: linear-gradient(
-    transparent 3.5714%,
+    transparent 6.25%,
     #eeeeee 0%,
-    #eeeeee 96.4286%,
+    #eeeeee 93.75%,
     transparent 0%
   ) !important;
-  background-size: 100% 28rpx;
+  background-size: 100% 27.907rpx;
   position: relative !important;
 }
 .sk-text {
@@ -184,174 +193,44 @@
   color: transparent !important;
   background-repeat: repeat-y !important;
 }
-.sk-text-14-2857-366 {
+.sk-text-14-2857-297 {
   background-image: linear-gradient(
     transparent 14.2857%,
     #eeeeee 0%,
     #eeeeee 85.7143%,
     transparent 0%
   ) !important;
-  background-size: 100% 39.2rpx;
+  background-size: 100% 39.0698rpx;
   position: relative !important;
 }
-.sk-text-14-2857-980 {
+.sk-text-14-2857-66 {
   background-image: linear-gradient(
     transparent 14.2857%,
     #eeeeee 0%,
     #eeeeee 85.7143%,
     transparent 0%
   ) !important;
-  background-size: 100% 36.4rpx;
+  background-size: 100% 34.186rpx;
   position: relative !important;
 }
-.sk-text-14-2857-4 {
+.sk-text-14-2857-177 {
   background-image: linear-gradient(
     transparent 14.2857%,
     #eeeeee 0%,
     #eeeeee 85.7143%,
     transparent 0%
   ) !important;
-  background-size: 100% 36.4rpx;
+  background-size: 100% 34.186rpx;
   position: relative !important;
 }
-.sk-text-14-2857-38 {
+.sk-text-14-2857-142 {
   background-image: linear-gradient(
     transparent 14.2857%,
     #eeeeee 0%,
     #eeeeee 85.7143%,
     transparent 0%
   ) !important;
-  background-size: 100% 36.4rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-916 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 36.4rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-330 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 36.4rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-483 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 36.4rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-10 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 36.4rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-137 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 36.4rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-737 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 36.4rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-15 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 36.4rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-242 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 44.8rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-803 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 33.6rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-305 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 44.8rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-915 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 33.6rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-592 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 44.8rpx;
-  position: relative !important;
-}
-.sk-text-14-2857-68 {
-  background-image: linear-gradient(
-    transparent 14.2857%,
-    #eeeeee 0%,
-    #eeeeee 85.7143%,
-    transparent 0%
-  ) !important;
-  background-size: 100% 33.6rpx;
+  background-size: 100% 34.186rpx;
   position: relative !important;
 }
 .sk-text-14-2857-677 {
@@ -361,17 +240,157 @@
     #eeeeee 85.7143%,
     transparent 0%
   ) !important;
-  background-size: 100% 44.8rpx;
+  background-size: 100% 34.186rpx;
   position: relative !important;
 }
-.sk-text-14-2857-570 {
+.sk-text-14-2857-635 {
   background-image: linear-gradient(
     transparent 14.2857%,
     #eeeeee 0%,
     #eeeeee 85.7143%,
     transparent 0%
   ) !important;
-  background-size: 100% 33.6rpx;
+  background-size: 100% 34.186rpx;
+  position: relative !important;
+}
+.sk-text-14-2857-185 {
+  background-image: linear-gradient(
+    transparent 14.2857%,
+    #eeeeee 0%,
+    #eeeeee 85.7143%,
+    transparent 0%
+  ) !important;
+  background-size: 100% 34.186rpx;
+  position: relative !important;
+}
+.sk-text-14-2857-221 {
+  background-image: linear-gradient(
+    transparent 14.2857%,
+    #eeeeee 0%,
+    #eeeeee 85.7143%,
+    transparent 0%
+  ) !important;
+  background-size: 100% 34.186rpx;
+  position: relative !important;
+}
+.sk-text-14-2857-40 {
+  background-image: linear-gradient(
+    transparent 14.2857%,
+    #eeeeee 0%,
+    #eeeeee 85.7143%,
+    transparent 0%
+  ) !important;
+  background-size: 100% 34.186rpx;
+  position: relative !important;
+}
+.sk-text-14-2857-29 {
+  background-image: linear-gradient(
+    transparent 14.2857%,
+    #eeeeee 0%,
+    #eeeeee 85.7143%,
+    transparent 0%
+  ) !important;
+  background-size: 100% 34.186rpx;
+  position: relative !important;
+}
+.sk-text-14-2857-18 {
+  background-image: linear-gradient(
+    transparent 14.2857%,
+    #eeeeee 0%,
+    #eeeeee 85.7143%,
+    transparent 0%
+  ) !important;
+  background-size: 100% 34.186rpx;
+  position: relative !important;
+}
+.sk-text-14-2857-402 {
+  background-image: linear-gradient(
+    transparent 14.2857%,
+    #eeeeee 0%,
+    #eeeeee 85.7143%,
+    transparent 0%
+  ) !important;
+  background-size: 100% 43.9535rpx;
+  position: relative !important;
+}
+.sk-text-14-2857-376 {
+  background-image: linear-gradient(
+    transparent 14.2857%,
+    #eeeeee 0%,
+    #eeeeee 85.7143%,
+    transparent 0%
+  ) !important;
+  background-size: 100% 31.7442rpx;
+  position: relative !important;
+}
+.sk-text-14-2857-97 {
+  background-image: linear-gradient(
+    transparent 14.2857%,
+    #eeeeee 0%,
+    #eeeeee 85.7143%,
+    transparent 0%
+  ) !important;
+  background-size: 100% 43.9535rpx;
+  position: relative !important;
+}
+.sk-text-14-2857-511 {
+  background-image: linear-gradient(
+    transparent 14.2857%,
+    #eeeeee 0%,
+    #eeeeee 85.7143%,
+    transparent 0%
+  ) !important;
+  background-size: 100% 31.7442rpx;
+  position: relative !important;
+}
+.sk-text-14-2857-88 {
+  background-image: linear-gradient(
+    transparent 14.2857%,
+    #eeeeee 0%,
+    #eeeeee 85.7143%,
+    transparent 0%
+  ) !important;
+  background-size: 100% 43.9535rpx;
+  position: relative !important;
+}
+.sk-text-14-2857-881 {
+  background-image: linear-gradient(
+    transparent 14.2857%,
+    #eeeeee 0%,
+    #eeeeee 85.7143%,
+    transparent 0%
+  ) !important;
+  background-size: 100% 31.7442rpx;
+  position: relative !important;
+}
+.sk-text-14-2857-889 {
+  background-image: linear-gradient(
+    transparent 14.2857%,
+    #eeeeee 0%,
+    #eeeeee 85.7143%,
+    transparent 0%
+  ) !important;
+  background-size: 100% 43.9535rpx;
+  position: relative !important;
+}
+.sk-text-14-2857-306 {
+  background-image: linear-gradient(
+    transparent 14.2857%,
+    #eeeeee 0%,
+    #eeeeee 85.7143%,
+    transparent 0%
+  ) !important;
+  background-size: 100% 31.7442rpx;
+  position: relative !important;
+}
+.sk-text-0-0000-883 {
+  background-image: linear-gradient(
+    transparent 0%,
+    #eeeeee 0%,
+    #eeeeee 100%,
+    transparent 0%
+  ) !important;
+  background-size: 100% 31.3953rpx;
   position: relative !important;
 }
 .sk-image {
