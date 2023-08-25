@@ -34,6 +34,19 @@ onLoad(async (option) => {
   getHotItemList()
 })
 
+// 下拉刷新状态
+const isTriggered = ref(false)
+const onRefresherrefresh = async () => {
+  // 开启动画
+  isTriggered.value = true
+  // 重置猜你喜欢组件数据
+  guessRef.value?.resetData()
+  // 加载数据
+  await Promise.all([getBannerList(), getCategoryList(), getHotItemList()])
+  // 关闭动画
+  isTriggered.value = false
+}
+
 const guessRef = ref<XtxGuessInstance>()
 
 // 滚动触底事件
@@ -45,7 +58,14 @@ const onScrolltolower = () => {
 <template>
   <view class="index">
     <CustomNavbar />
-    <scroll-view class="scroll-view" scroll-y refresher-enabled @scrolltolower="onScrolltolower">
+    <scroll-view
+      class="scroll-view"
+      scroll-y
+      refresher-enabled
+      :refresher-triggered="isTriggered"
+      @refresherrefresh="onRefresherrefresh"
+      @scrolltolower="onScrolltolower"
+    >
       <XtxSwiper :list="bannerList" />
       <CategoryPanel :list="categoryList" />
       <HotPanel :list="hotItemList" />
@@ -57,7 +77,9 @@ const onScrolltolower = () => {
 <style lang="scss" scoped>
 .index {
   background-color: #f7f7f7;
-  height: 100%;
+  // height: 100%;
+  // 这里不能用100%,否则会没有高度，scrollView也会没有高度，不会触发加载更多
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
