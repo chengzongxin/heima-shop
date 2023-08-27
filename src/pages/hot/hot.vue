@@ -39,6 +39,21 @@ const activeIndex = ref(0)
 onLoad(() => {
   getHotRecommendData()
 })
+
+const onScrolltolower = async () => {
+  // 获取当前tab
+  const tab = tabs.value[activeIndex.value]
+  // page++
+  tab.goodsItems.page++
+  // 调用请求
+  const res = await getHotRecommendAPI(curMap!.url, {
+    subType: tab.id,
+    page: tab.goodsItems.page,
+    pageSize: tab.goodsItems.pageSize,
+  })
+  // 追加数据
+  tab.goodsItems.items.push(...res.result.subTypes[activeIndex.value].goodsItems.items)
+}
 </script>
 
 <template>
@@ -66,6 +81,7 @@ onLoad(() => {
       v-show="index === activeIndex"
       scroll-y
       class="scroll-view"
+      @scrolltolower="onScrolltolower"
     >
       <view class="goods">
         <navigator
