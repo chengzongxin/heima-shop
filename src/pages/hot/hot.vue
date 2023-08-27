@@ -24,7 +24,10 @@ uni.setNavigationBarTitle({
 })
 
 const getHotRecommendData = async () => {
-  const res = await getHotRecommendAPI(curMap!.url)
+  const res = await getHotRecommendAPI(curMap!.url, {
+    page: import.meta.env.DEV ? 30 : 1,
+    pageSize: 10,
+  })
   console.log(res)
   bannerPicture.value = res.result.bannerPicture
   tabs.value = res.result.subTypes
@@ -33,7 +36,7 @@ const getHotRecommendData = async () => {
 // banner
 const bannerPicture = ref('')
 // tabs
-const tabs = ref<SubTypeItem[]>([])
+const tabs = ref<(SubTypeItem & { finish?: boolean })[]>([])
 // active index
 const activeIndex = ref(0)
 onLoad(() => {
@@ -43,6 +46,14 @@ onLoad(() => {
 const onScrolltolower = async () => {
   // 获取当前tab
   const tab = tabs.value[activeIndex.value]
+  // 判断是否超过总页码
+  if (tab.goodsItems.page >= tab.goodsItems.pages) {
+    tab.finish = true
+    return uni.showToast({
+      icon: 'none',
+      title: '没有更多数据了~',
+    })
+  }
   // page++
   tab.goodsItems.page++
   // 调用请求
@@ -99,7 +110,9 @@ const onScrolltolower = async () => {
           </view>
         </navigator>
       </view>
-      <view class="loading-text">正在加载...</view>
+      <view class="loading-text">
+        {{ item.finish ? '没有更多数据了~' : '正在加载...' }}
+      </view>
     </scroll-view>
   </view>
 </template>
