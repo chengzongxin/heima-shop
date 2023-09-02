@@ -8,6 +8,7 @@ import type { BannerItem, CategoryItem, HotItem } from '../../types/home'
 import { HotPanel } from './components/HotPanel.vue'
 import type { XtxGuessInstance } from '../../components/components'
 import PageSkeleton from './components/PageSkeleton.vue'
+import { useGuessList } from '@/composables'
 
 const bannerList = ref<BannerItem[]>([])
 const categoryList = ref<CategoryItem[]>([])
@@ -51,12 +52,8 @@ const onRefresherrefresh = async () => {
   isTriggered.value = false
 }
 
-const guessRef = ref<XtxGuessInstance>()
-
-// 滚动触底事件
-const onScrolltolower = () => {
-  guessRef.value?.getMore()
-}
+// 猜你喜欢组合式函数
+const { guessRef, onScrolltolower } = useGuessList() // [!code ++]
 </script>
 
 <template>
