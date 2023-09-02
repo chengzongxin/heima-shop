@@ -6,7 +6,7 @@ import { ref } from 'vue'
 import type { GoodsResult } from '../../types/goods'
 import AddressPanel from './components/AddressPanel.vue'
 import ServicePanel from './components/ServicePanel.vue'
-
+import PageSkeleton from './components/PageSkeleton.vue'
 // uni-ui 弹出层组件 ref
 const popup = ref<{
   open: (type?: UniHelper.UniPopupType) => void
@@ -37,6 +37,7 @@ onLoad((option) => {
 const getGoodsByIdData = async () => {
   const res = await getGoodsByIdAPI(query.id)
   goods.value = res.result
+  isFinish.value = true
 }
 
 const onChange: UniHelper.SwiperOnChange = (ev) => {
@@ -51,130 +52,134 @@ const onTapImage = (url: string) => {
     urls: goods.value!.mainPictures,
   })
 }
+
+const isFinish = ref(false)
 </script>
 
 <template>
-  <scroll-view scroll-y class="viewport">
-    <!-- 基本信息 -->
-    <view class="goods">
-      <!-- 商品主图 -->
-      <view class="preview">
-        <swiper circular @change="onChange">
-          <swiper-item v-for="item in goods?.mainPictures" :key="item">
-            <image @tap="onTapImage" mode="aspectFill" :src="item" />
-          </swiper-item>
-        </swiper>
-        <view class="indicator">
-          <text class="current">{{ currentIndex + 1 }}</text>
-          <text class="split">/</text>
-          <text class="total">{{ goods?.mainPictures.length }}</text>
-        </view>
-      </view>
-
-      <!-- 商品简介 -->
-      <view class="meta">
-        <view class="price">
-          <text class="symbol">¥</text>
-          <text class="number">{{ goods?.price }}</text>
-        </view>
-        <view class="name ellipsis"> {{ goods?.name }} </view>
-        <view class="desc"> {{ goods?.desc }} </view>
-      </view>
-
-      <!-- 操作面板 -->
-      <view class="action">
-        <view class="item arrow">
-          <text class="label">选择</text>
-          <text class="text ellipsis"> 请选择商品规格 </text>
-        </view>
-        <view @tap="openPopup('address')" class="item arrow">
-          <text class="label">送至</text>
-          <text class="text ellipsis"> 请选择收获地址 </text>
-        </view>
-        <view @tap="openPopup('service')" class="item arrow">
-          <text class="label">服务</text>
-          <text class="text ellipsis"> 无忧退 快速退款 免费包邮 </text>
-        </view>
-      </view>
-    </view>
-    <!-- uni-ui 弹出层 -->
-    <uni-popup ref="popup" type="bottom" background-color="#fff">
-      <AddressPanel v-if="popupName === 'address'" @close="popup?.close()" />
-      <ServicePanel v-if="popupName === 'service'" @close="popup?.close()" />
-    </uni-popup>
-    <!-- 商品详情 -->
-    <view class="detail panel">
-      <view class="title">
-        <text>详情</text>
-      </view>
-      <view class="content">
-        <view class="properties">
-          <!-- 属性详情 -->
-          <view class="item">
-            <text class="label">属性名</text>
-            <text class="value">属性值</text>
-          </view>
-          <view class="item">
-            <text class="label">属性名</text>
-            <text class="value">属性值</text>
+  <view class="wrapper" v-if="isFinish">
+    <scroll-view scroll-y class="viewport">
+      <!-- 基本信息 -->
+      <view class="goods">
+        <!-- 商品主图 -->
+        <view class="preview">
+          <swiper circular @change="onChange">
+            <swiper-item v-for="item in goods?.mainPictures" :key="item">
+              <image @tap="onTapImage" mode="aspectFill" :src="item" />
+            </swiper-item>
+          </swiper>
+          <view class="indicator">
+            <text class="current">{{ currentIndex + 1 }}</text>
+            <text class="split">/</text>
+            <text class="total">{{ goods?.mainPictures.length }}</text>
           </view>
         </view>
-        <!-- 图片详情 -->
-        <image
-          mode="widthFix"
-          src="https://yanxuan-item.nosdn.127.net/a8d266886d31f6eb0d7333c815769305.jpg"
-        ></image>
-        <image
-          mode="widthFix"
-          src="https://yanxuan-item.nosdn.127.net/a9bee1cb53d72e6cdcda210071cbd46a.jpg"
-        ></image>
-      </view>
-    </view>
 
-    <!-- 同类推荐 -->
-    <view class="similar panel">
-      <view class="title">
-        <text>同类推荐</text>
-      </view>
-      <view class="content">
-        <navigator
-          v-for="item in 4"
-          :key="item"
-          class="goods"
-          hover-class="none"
-          :url="`/pages/goods/goods?id=`"
-        >
-          <image
-            class="image"
-            mode="aspectFill"
-            src="https://yanxuan-item.nosdn.127.net/e0cea368f41da1587b3b7fc523f169d7.png"
-          ></image>
-          <view class="name ellipsis">简约山形纹全棉提花毛巾</view>
+        <!-- 商品简介 -->
+        <view class="meta">
           <view class="price">
             <text class="symbol">¥</text>
-            <text class="number">18.50</text>
+            <text class="number">{{ goods?.price }}</text>
           </view>
+          <view class="name ellipsis"> {{ goods?.name }} </view>
+          <view class="desc"> {{ goods?.desc }} </view>
+        </view>
+
+        <!-- 操作面板 -->
+        <view class="action">
+          <view class="item arrow">
+            <text class="label">选择</text>
+            <text class="text ellipsis"> 请选择商品规格 </text>
+          </view>
+          <view @tap="openPopup('address')" class="item arrow">
+            <text class="label">送至</text>
+            <text class="text ellipsis"> 请选择收获地址 </text>
+          </view>
+          <view @tap="openPopup('service')" class="item arrow">
+            <text class="label">服务</text>
+            <text class="text ellipsis"> 无忧退 快速退款 免费包邮 </text>
+          </view>
+        </view>
+      </view>
+      <!-- uni-ui 弹出层 -->
+      <uni-popup ref="popup" type="bottom" background-color="#fff">
+        <AddressPanel v-if="popupName === 'address'" @close="popup?.close()" />
+        <ServicePanel v-if="popupName === 'service'" @close="popup?.close()" />
+      </uni-popup>
+      <!-- 商品详情 -->
+      <view class="detail panel">
+        <view class="title">
+          <text>详情</text>
+        </view>
+        <view class="content">
+          <view class="properties">
+            <!-- 属性详情 -->
+            <view class="item">
+              <text class="label">属性名</text>
+              <text class="value">属性值</text>
+            </view>
+            <view class="item">
+              <text class="label">属性名</text>
+              <text class="value">属性值</text>
+            </view>
+          </view>
+          <!-- 图片详情 -->
+          <image
+            mode="widthFix"
+            src="https://yanxuan-item.nosdn.127.net/a8d266886d31f6eb0d7333c815769305.jpg"
+          ></image>
+          <image
+            mode="widthFix"
+            src="https://yanxuan-item.nosdn.127.net/a9bee1cb53d72e6cdcda210071cbd46a.jpg"
+          ></image>
+        </view>
+      </view>
+
+      <!-- 同类推荐 -->
+      <view class="similar panel">
+        <view class="title">
+          <text>同类推荐</text>
+        </view>
+        <view class="content">
+          <navigator
+            v-for="item in 4"
+            :key="item"
+            class="goods"
+            hover-class="none"
+            :url="`/pages/goods/goods?id=`"
+          >
+            <image
+              class="image"
+              mode="aspectFill"
+              src="https://yanxuan-item.nosdn.127.net/e0cea368f41da1587b3b7fc523f169d7.png"
+            ></image>
+            <view class="name ellipsis">简约山形纹全棉提花毛巾</view>
+            <view class="price">
+              <text class="symbol">¥</text>
+              <text class="number">18.50</text>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+    <!-- 用户操作 -->
+    <view class="toolbar" :style="{ paddingBottom: safeAreaInsets?.bottom + 'px' }">
+      <view class="icons">
+        <button class="icons-button"><text class="icon-heart"></text>收藏</button>
+        <button class="icons-button" open-type="contact">
+          <text class="icon-handset"></text>客服
+        </button>
+        <navigator class="icons-button" url="/pages/cart/cart" open-type="switchTab">
+          <text class="icon-cart"></text>购物车
         </navigator>
       </view>
-    </view>
-  </scroll-view>
-
-  <!-- 用户操作 -->
-  <view class="toolbar" :style="{ paddingBottom: safeAreaInsets?.bottom + 'px' }">
-    <view class="icons">
-      <button class="icons-button"><text class="icon-heart"></text>收藏</button>
-      <button class="icons-button" open-type="contact">
-        <text class="icon-handset"></text>客服
-      </button>
-      <navigator class="icons-button" url="/pages/cart/cart" open-type="switchTab">
-        <text class="icon-cart"></text>购物车
-      </navigator>
-    </view>
-    <view class="buttons">
-      <view class="addcart"> 加入购物车 </view>
-      <view class="buynow"> 立即购买 </view>
+      <view class="buttons">
+        <view class="addcart"> 加入购物车 </view>
+        <view class="buynow"> 立即购买 </view>
+      </view>
     </view>
   </view>
+  <PageSkeleton v-else />
 </template>
 
 <style lang="scss">
