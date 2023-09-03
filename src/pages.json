@@ -108,6 +108,12 @@
 					"style": {
 						"navigationBarTitleText": "设置"
 					}
+				},
+				{
+					"path": "profile/profile",
+					"style": {
+						"navigationStyle": "custom"
+					}
 				}
 			]
 		}
