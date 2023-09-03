@@ -10,3 +10,16 @@ export const getMemberProfileAPI = () => {
     url: '/member/profile',
   })
 }
+
+/**
+ * 修改个人信息
+ * @param data 请求体参数
+ */
+export const putMemberProfileAPI = (data: ProfileParams) => {
+  console.log(data)
+  return http({
+    method: 'PUT',
+    url: '/member/profile',
+    data,
+  })
+}
